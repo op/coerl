@@ -1,12 +1,14 @@
 # coerl
 
-coerl colourises [curl]'s output.
+cörl colourises [curl]'s output.
 
 [curl]: https://curl.haxx.se
 
 ## Usage
 
 Use coerl instead of curl. curl is still required.
+
+[![Example](coerl.png)](coerl.png)
 
 ```sh
 $ COERL_SSL_DATA_OFF=0 coerl -vs -d '{}'
@@ -16,8 +18,6 @@ $ alias curl=coerl
 $ curl -sv -L https://google.com > /dev/null
 $ COERL_DATA_OFF=1 COERL_TEXT_OFF=1 curl -sv -L https://google.com > /dev/null
 ```
-
-[![Example](coerl.png)](coerl.png)
 
 ## Installation
 
