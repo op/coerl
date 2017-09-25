@@ -2,7 +2,7 @@
 
 coerl colourises [curl]'s output.
 
-[curl](https://curl.haxx.se)
+[curl]: https://curl.haxx.se
 
 ## Usage
 
@@ -77,14 +77,14 @@ breaks piping of the output, to eg. [jq] or [rq], since headers are
 written to stdout. Using the `--verbose` flag fixes this but also
 introduces heaps of output.
 
-[jq](https://stedolan.github.io/jq/)
-[rq](https://github.com/dflemstr/rq)
+[jq]: https://stedolan.github.io/jq/
+[rq]: https://github.com/dflemstr/rq
 
 This hack adds some colours to the `--verbose` output of curl.
 
 Credit goes to [httpstat] for inspiration.
 
-[httpstat](https://github.com/reorx/httpstat)
+[httpstat]: https://github.com/reorx/httpstat
 
 ## Limitations
 
