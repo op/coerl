@@ -10,6 +10,7 @@ import (
 	"os"
 	"os/exec"
 	"strconv"
+	"syscall"
 )
 
 const (
@@ -175,7 +176,12 @@ func main() {
 	io.Copy(os.Stdout, stdout)
 
 	if err := cmd.Wait(); err != nil {
-		log.Fatal(err)
+		if e, ok := err.(*exec.ExitError); ok {
+			if s, ok := e.Sys().(syscall.WaitStatus); ok {
+				os.Exit(s.ExitStatus())
+			}
+		}
+		panic("unhandled error command state: " + err.Error())
 	}
 }
 
